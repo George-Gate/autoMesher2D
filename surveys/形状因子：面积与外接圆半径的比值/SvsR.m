@@ -1,4 +1,4 @@
-%%
+﻿%%
 angle=0.01:0.05:pi-0.01;
 a=1;
 b=0.01:0.01:10;
@@ -8,12 +8,12 @@ for the=angle
     c=sqrt(a^2+b.^2-2*a*b*cos(the));
     R=a*b.*c./(4*S);
     plot(b,S./(pi*R.^2));
-    title(['\theta=',num2str(round(the/pi*180)),'��']);
+    title(['\theta=',num2str(round(the/pi*180)),'°']);
     set(gca,'Ylim',[0 0.5]);
     pause(0.2);
 end
 
-%% (init) S./R^2 �ĽǶȷֲ�
+%% (init) S./R^2 的角度分布
 [the1,the2]=meshgrid(0.01:0.005:pi-0.01,0.01:0.005:pi-0.01);
 a=1;
 h=a./(cot(the1)+cot(the2));
